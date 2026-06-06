@@ -15,7 +15,7 @@ function App() {
 
   const addNote = (title: string, body: string) => {
     const newNote: Note = {
-      id: crypto.randomUUID(),
+      id: Date.now().toString() + Math.random().toString(36).slice(2),
       title,
       body,
       createdAt: new Date().toISOString()
